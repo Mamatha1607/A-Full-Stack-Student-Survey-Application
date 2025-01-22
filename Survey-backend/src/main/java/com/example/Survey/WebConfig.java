@@ -1,4 +1,4 @@
-//Authors: Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka
+//Author: Mamatha Iruvaram 
 // Description: The WebConfig class configures CORS for the API, allowing requests from http://localhost:4200 with methods GET, POST, PUT, and DELETE, and enabling credentials.
 package com.example.Survey;
 import org.springframework.context.annotation.Configuration;
