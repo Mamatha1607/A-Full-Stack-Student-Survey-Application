@@ -1,4 +1,4 @@
-// Authors: Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka
+// Author: Mamatha Iruvaram 
 // Description: The SurveyRepository interface extends JpaRepository for CRUD operations on the Survey entity, using email (a String) as the primary key. No additional methods are required as JpaRepository provides default implementations for common operations.
 package com.example.Survey.repository;
 
