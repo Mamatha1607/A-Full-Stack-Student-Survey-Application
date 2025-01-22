@@ -1,5 +1,5 @@
 
-// Authors: Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka
+// Author: Mamatha Iruvaram 
 // Description: The SurveyController is a Spring Boot REST API that allows for creating, updating, deleting, and retrieving surveys. It uses a SurveyRepository for database interactions and supports CORS for communication with a frontend running on http://localhost:4200.
 package com.example.Survey.controller;
 
