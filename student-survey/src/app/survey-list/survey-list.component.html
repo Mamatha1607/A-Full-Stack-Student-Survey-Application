@@ -1,0 +1,92 @@
+<!-- Authors: Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka
+Description: This code is responsible for the display of the elements on the List all surveys screen. -->
+<html>
+  <head>
+    <title>List of Surveys</title>
+    <!-- Include Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>List of Surveys</h1>
+    <nav>
+      <a routerLink="/home">Home Page</a>
+      <a routerLink="/survey-form">Survey Form</a>
+    </nav>
+    <div class="container">
+      <div *ngIf="surveys.length > 0; else noSurveys">
+        <div class="survey-table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Street Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Survey Date</th>
+                <th>Liked Most</th>
+                <th>Interest Source</th>
+                <th>Recommendation Likelihood</th>
+                <th>Comments</th>
+                <th>Actions</th> <!-- Actions column -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let survey of surveys; let i = index">
+                <ng-container *ngIf="editingIndex === i; else viewMode">
+                  <td><input [(ngModel)]="editingSurvey!.firstName" placeholder="First Name" required class="input-field" /></td>
+                  <td><input [(ngModel)]="editingSurvey!.lastName" placeholder="Last Name" required class="input-field" /></td>
+                  <td><input [(ngModel)]="editingSurvey!.streetAddress" placeholder="Street Address" required class="input-field" /></td>
+                  <td><input [(ngModel)]="editingSurvey!.city" placeholder="City" required class="input-field" /></td>
+                  <td><input [(ngModel)]="editingSurvey!.state" placeholder="State" required class="input-field" /></td>
+                  <td><input [(ngModel)]="editingSurvey!.zip" placeholder="Zip Code" required class="input-field" /></td>
+                  <td><input [(ngModel)]="editingSurvey!.phoneNumber" placeholder="Phone Number" required class="input-field" /></td>
+                  <td>{{ editingSurvey!.email }}</td>
+                  <td><input [(ngModel)]="editingSurvey!.surveyDate" type="date" class="input-field" /></td>
+                  <td><input [(ngModel)]="editingSurvey!.likedMost" placeholder="Liked Most" class="input-field" /></td>
+                  <td><input [(ngModel)]="editingSurvey!.interestSource" placeholder="Interest Source" class="input-field" /></td>
+                  <td><input [(ngModel)]="editingSurvey!.recommendationLikelihood" placeholder="Recommendation" class="input-field" /></td>
+                  <td><input [(ngModel)]="editingSurvey!.comments" placeholder="Comments" class="input-field" /></td>
+                  <td class="actions">
+                    <button (click)="onSaveEdit()">Save</button>
+                    <button (click)="onCancelEdit()">Cancel</button>
+                  </td>
+                </ng-container>
+
+                <ng-template #viewMode>
+                  <td>{{ survey.firstName }}</td>
+                  <td>{{ survey.lastName }}</td>
+                  <td>{{ survey.streetAddress }}</td>
+                  <td>{{ survey.city }}</td>
+                  <td>{{ survey.state }}</td>
+                  <td>{{ survey.zip }}</td>
+                  <td>{{ survey.phoneNumber }}</td>
+                  <td>{{ survey.email }}</td>
+                  <td>{{ survey.surveyDate | date: 'short' }}</td>
+                  <td>{{ survey.likedMost }}</td>
+                  <td>{{ survey.interestSource }}</td>
+                  <td>{{ survey.recommendationLikelihood }}</td>
+                  <td>{{ survey.comments || 'No comments provided' }}</td>
+                  <td class="actions">
+                    <i class="fas fa-edit edit-icon" (click)="onEdit(survey)" title="Edit"></i>
+                    <i class="fas fa-trash delete-icon" (click)="onDelete(survey, i)" title="Delete"></i>
+                  </td>
+                </ng-template>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <ng-template #noSurveys>
+        <p class="no-surveys-message">No surveys available at the moment.</p>
+      </ng-template>
+    </div>
+    <footer>
+      <p>&copy; 2024 Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka</p>
+    </footer>
+  </body>
+</html>

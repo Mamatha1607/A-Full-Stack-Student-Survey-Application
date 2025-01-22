@@ -1,0 +1,139 @@
+<!-- Authors: Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka
+Description: This code is responsible for showing all the necessary components on the UI -->
+
+<html>
+    <head>
+        <title>
+            Update Survey
+        </title>
+    </head>
+    <body>
+        <div class="survey-form-container">
+            <h1>Edit Survey</h1>
+            <div class="nav">
+                <a routerLink="/home">Home Page</a>
+                <a routerLink="/survey-list">Survey List</a>
+            </div>
+            <!-- Show a loading message until the form is initialized -->
+            <div *ngIf="isLoading">
+              <p>Loading...</p>
+            </div>
+          
+            <!-- Form Container -->
+            <div *ngIf="!isLoading">
+              <form [formGroup]="surveyForm" (ngSubmit)="onSubmit()">
+                <!-- First Name -->
+                <label for="firstName">First Name:</label>
+                <input id="firstName" formControlName="firstName" required />
+                <div *ngIf="surveyForm.get('firstName')?.invalid && surveyForm.get('firstName')?.touched">
+                  <small class="error">First Name is required.</small>
+                </div>
+          
+                <!-- Last Name -->
+                <label for="lastName">Last Name:</label>
+                <input id="lastName" formControlName="lastName" required />
+                <div *ngIf="surveyForm.get('lastName')?.invalid && surveyForm.get('lastName')?.touched">
+                  <small class="error">Last Name is required.</small>
+                </div>
+          
+                <!-- Street Address -->
+                <label for="streetAddress">Street Address:</label>
+                <input id="streetAddress" formControlName="streetAddress" required />
+                <div *ngIf="surveyForm.get('streetAddress')?.invalid && surveyForm.get('streetAddress')?.touched">
+                  <small class="error">Street Address is required.</small>
+                </div>
+          
+                <!-- City -->
+                <label for="city">City:</label>
+                <input id="city" formControlName="city" required />
+                <div *ngIf="surveyForm.get('city')?.invalid && surveyForm.get('city')?.touched">
+                  <small class="error">City is required.</small>
+                </div>
+          
+                <!-- State -->
+                <label for="state">State:</label>
+                <input id="state" formControlName="state" required />
+                <div *ngIf="surveyForm.get('state')?.invalid && surveyForm.get('state')?.touched">
+                  <small class="error">State is required.</small>
+                </div>
+          
+                <!-- Zip -->
+                <label for="zip">Zip:</label>
+                <input id="zip" formControlName="zip" required />
+                <div *ngIf="surveyForm.get('zip')?.invalid && surveyForm.get('zip')?.touched">
+                  <small class="error">Zip is required.</small>
+                </div>
+          
+                <!-- Phone Number -->
+                <label for="phoneNumber">Phone Number:</label>
+                <input id="phoneNumber" formControlName="phoneNumber" required />
+                <div *ngIf="surveyForm.get('phoneNumber')?.invalid && surveyForm.get('phoneNumber')?.touched">
+                  <small class="error">Phone Number is required and must be 10 digits.</small>
+                </div>
+          
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input id="email" formControlName="email" readonly />
+                <div *ngIf="surveyForm.get('email')?.invalid && surveyForm.get('email')?.touched">
+                  <small class="error">A valid Email is required.</small>
+                </div>
+          
+                <!-- Survey Date -->
+                <label for="surveyDate">Date of Survey:</label>
+                <input id="surveyDate" type="date" formControlName="surveyDate" required />
+                <div *ngIf="surveyForm.get('surveyDate')?.invalid && surveyForm.get('surveyDate')?.touched">
+                  <small class="error">Survey Date is required.</small>
+                </div>
+          
+                <!-- What did you like most? -->
+                <fieldset>
+                  <legend>What did you like most about the campus?</legend>
+                  <div *ngFor="let option of likedMostOptions">
+                    <label>
+                      <input
+                        type="checkbox"
+                        [value]="option"
+                        (change)="toggleLikedMost(option)"
+                        [checked]="surveyForm.get('likedMost')?.value?.includes(option)"
+                      />
+                      {{ option }}
+                    </label>
+                  </div>
+                </fieldset>
+          
+                <!-- Interest Source -->
+                <fieldset>
+                  <legend>How did you become interested in the university?</legend>
+                  <div *ngFor="let option of interestSourceOptions">
+                    <label>
+                      <input type="radio" [value]="option" formControlName="interestSource" />
+                      {{ option }}
+                    </label>
+                  </div>
+                </fieldset>
+          
+                <!-- Recommendation Likelihood -->
+                <label for="recommendationLikelihood">Likelihood of Recommending:</label>
+                <select id="recommendationLikelihood" formControlName="recommendationLikelihood" required>
+                  <option *ngFor="let option of recommendationLikelihoodOptions" [value]="option">
+                    {{ option }}
+                  </option>
+                </select>
+          
+                <!-- Comments -->
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" formControlName="comments"></textarea>
+          
+                <!-- Buttons -->
+                 <div class="button-container">
+                    <button type="submit" [disabled]="!surveyForm.valid">Save Changes</button>
+                    <button type="button" (click)="onCancel()">Cancel</button>
+                 </div>
+              </form>
+              <footer>
+                <p>&copy; 2024 Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka</p>
+              </footer>
+            </div>
+          </div>        
+    </body>
+</html>

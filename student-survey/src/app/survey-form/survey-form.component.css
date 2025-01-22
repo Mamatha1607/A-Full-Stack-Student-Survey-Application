@@ -1,0 +1,141 @@
+/* Authors: Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka
+Description: This code is responsible for adding all the styling to the survey-form.component.html */
+/* Body styling to allow scrolling on the page */
+body {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url(gmuSurvey.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  background-color: #f4f4f4;
+  overflow-y: auto;
+}
+
+/* Form container styling - Increased width */
+.survey-form-container {
+  background-color: #fff;
+  padding: 40px 80px 20px 80px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  margin: 100px;
+  min-height: 500px;
+}
+
+/* Flex wrapper for the form */
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Center the heading and nav */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.nav {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Form element styling */
+label {
+  margin-top: 15px;
+  font-weight: bold;
+  display: block;
+}
+
+input, select, textarea {
+  margin-top: 10px;
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;  /* Add space between the buttons */
+  margin-top: 20px; /* Add space above the buttons */
+  width: 100%; /* Ensure it spans the full width */
+  text-align: center; /* Center the text inside the buttons */
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 150px; /* Set fixed width for both buttons */
+  font-size: 16px;
+  display: inline-block; /* Make buttons inline */
+}
+
+/* Submit button - Green */
+button[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Cancel button - Red */
+button[type="button"] {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+}
+
+button[type="button"]:hover {
+  background-color: #c82333;
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+/* Add padding above the sections */
+fieldset {
+  margin-top: 20px; /* Add padding above the fieldset */
+  padding-top: 10px; /* Add some space inside the fieldset */
+}
+
+/* Padding for legends */
+legend {
+  padding-top: 10px;
+}
+  footer {
+    text-align: center;
+    padding: 1px;
+    font-size: 12px;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+    margin-top: 20px;
+}

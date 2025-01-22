@@ -1,0 +1,24 @@
+/* Authors: Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka
+Description: The code responsible for adding all the styling to its html component */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #006633;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #006633;
+  font-weight: bold;
+}
+a:hover {
+  background-color: #006633;
+  color: white;
+}

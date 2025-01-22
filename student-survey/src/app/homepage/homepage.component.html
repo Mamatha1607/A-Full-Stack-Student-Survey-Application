@@ -1,0 +1,47 @@
+<!-- Authors: Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka
+Description: This code is responsible for displaying the home page and its components on Interface. -->
+<html>
+    <head>
+        <title>Survey Home</title>
+        <style>
+          body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url(gmucampus.jpg) no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .container {
+            background: rgba(0, 0, 0, 0.7); 
+            padding: 20px 30px;
+            border-radius: 10px;
+            width: 700px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+          <!-- Assignment Title -->
+          <h1 style="color: #ffffff; font-size: 2em; text-align: center;">
+            SWE - 642 Assignment 3
+          </h1>
+            <!-- University Heading -->
+            <h1 style="padding:0px ;font-size: 5em; color: #FFCC33; text-align: center;  -webkit-text-stroke: 3px #006633">
+                George Mason University
+            </h1>
+            
+            <div style="margin: 20px 0; text-align: center;">
+                <a routerLink="/survey-form" style="text-decoration: none; font-size: 1em; color: #006633; font-weight: bold; padding: 10px 20px; border: 2px solid #006633; border-radius: 5px; background-color: #FFCC33; margin-right: 10px;">Student Survey</a>
+                <a routerLink="/survey-list" style="text-decoration: none; font-size: 1em; color: #006633; font-weight: bold; padding: 10px 20px; border: 2px solid #006633; border-radius: 5px; background-color: #FFCC33;">List all Surveys</a>
+            </div>
+            <footer style="margin-top: auto; padding: 30px 20px; color: #ffffff; text-align: center; width: 98.5%;">
+                <p style="margin: 0; font-size: 1em;">&copy; 2024 Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka</p>
+            </footer>
+        </div>
+    </body>
+</html>
