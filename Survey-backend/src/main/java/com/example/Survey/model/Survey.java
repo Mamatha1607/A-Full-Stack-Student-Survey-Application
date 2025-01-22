@@ -1,4 +1,4 @@
-//Authors: Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka
+//Authors: Mamatha Iruvaram 
 // Description: The Survey class is a JPA entity that represents survey data, with fields for personal information, survey responses, and additional comments. It uses email as the primary key and includes mappings for survey-related details like preferences and recommendation likelihood. 
 package com.example.Survey.model;
 
