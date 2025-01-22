@@ -1,4 +1,4 @@
-// Authors: Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka
+// Author: Mamatha Iruvaram
 
 //The code initializes and runs a Spring Boot application, configuring component scanning and enabling JPA repositories for database interactions.   
 package com.example.Survey;
