@@ -1,4 +1,4 @@
-// Authors: Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka
+// Author: Mamatha Iruvaram 
 //Description: This code is a test suite for the AppComponent in Angular. It checks if the component is created successfully, verifies that the title is 'student-survey', and ensures that the title is rendered correctly in the template.
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
