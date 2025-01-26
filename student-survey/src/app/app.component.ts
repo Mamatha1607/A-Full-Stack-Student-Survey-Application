@@ -1,4 +1,4 @@
-// Authors: Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka
+// Author: Mamatha Iruvaram 
 //Description: This Angular component (AppComponent) is a standalone component that serves as the root component of the application. It includes routing functionality through the RouterModule and provides the necessary setup to display views defined in the routing configuration (using <router-outlet>). The title property is set to 'Student Survey App', which could be used in the component's template. Additionally, components like SurveyFormComponent and SurveyListComponent are commented out, but they could be imported to be used within the application.
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router'; // For routing
