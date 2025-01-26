@@ -1,4 +1,4 @@
-// Authors: Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka
+// Author: Mamatha Iruvaram
 // Description: It uses RouterModule for navigation and is linked to its own HTML and CSS files for layout and styling.
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
