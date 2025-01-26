@@ -1,4 +1,4 @@
-// Authors: Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka
+// Author: Mamatha Iruvaram 
 // Description: This Angular test suite verifies the component functionality. It initializes the component, ensures proper compilation, and includes a test case to confirm the component's successful creation.
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
