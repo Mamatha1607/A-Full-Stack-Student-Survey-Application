@@ -1,4 +1,4 @@
-// Authors: Mamatha Iruvaram and Adilakshmi Pratyusha Mothadaka
+// Author: Mamatha Iruvaram 
 // Description: This Angular service (SurveyService) interacts with a backend API to manage survey data. It provides methods to fetch, create, update, and delete surveys, using the HttpClient module to perform HTTP requests.
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
