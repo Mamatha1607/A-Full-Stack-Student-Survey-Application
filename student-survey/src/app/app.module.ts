@@ -1,4 +1,4 @@
-// Authors:Mamatha Iruvaram and Adilakshmi Prayusha Mothadaka
+// Author:Mamatha Iruvaram 
 // Description: This Angular module (AppModule) sets up the foundational structure of the application. It imports essential modules for browser compatibility, form handling, HTTP services, and routing. Additionally, it declares the application components and configures the HTTP client for API interactions. The bootstrapApplication function is used to bootstrap the AppComponent as the root component of the application.
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
