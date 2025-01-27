@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5DC;
+        }
+        .navbar {
+            background-color: #F5F5DC;
+            color: black;
+            padding: 15px;
+            text-align: left;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+        .navbar a:hover {
+            color: white;
+            background-color: #575757;
+        }
+        .section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .profile-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 2px solid black;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 80%;
+            margin: 40px auto;
+            background-color: #F5F5DC;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .profile-box img.profile-photo {
+            width: 400px; 
+            height: 450px; 
+            border-radius: 0;
+            margin-left: 20px;
+        }
+        .profile-box .text {
+            text-align: center;
+            flex: 1;
+        }
+        .profile-box .text h2 {
+            padding-top: 45px;
+            font-size: 3em;
+            margin: 0;
+        }
+        .profile-box .text p {
+            margin: 5px 0;
+        }
+        .social-icons {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            display: inline-block;
+        }
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+        .about-me-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <span style="font-weight: bold;">642-Assignment 1</span>
+        <a href="#home">Home</a>
+        <a href="#bio">Bio</a>
+        <a href="survey.html" target="_blank">Assignments</a>
+    </div>
+
+    <div id="home" class="section">
+        <div class="profile-box" style="text-align: center;">
+            <div class="text">
+                <h2>Mamatha Iruvaram</h2>
+                <p>Information Systems Graduate</p>
+                <p>George Mason University</p>
+            </div>
+            <img src="https://miruvara.s3.amazonaws.com/pic2.jpeg" alt="Profile Photo" class="profile-photo">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/mamathairuvaram/" target="_blank">
+                    <img src="https://miruvara.s3.amazonaws.com/linkdn.png" " alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="bio" class="section">
+        <h1>About Me</h1>
+        <div class="about-me-content">
+            <p>Hello, I’m Mamatha Iruvaram, an Information Systems graduate with a passion for integrating precision and creativity into technology. My journey began with a bachelor's degree in Computer Science Engineering, which laid a solid foundation for my career. Starting as a Programmer Analyst, I honed my skills in developing automations, enhancing software reliability through rigorous testing, and crafting precise test cases. My expertise spans both front-end and back-end development, with proficiency in tools like Android Studio and Apache Tomcat. I also excel in data-centric programming using Python, R, and SQL. Throughout my career, I’ve led projects ranging from complex loyalty program management systems to insightful data visualizations. As I advance my knowledge, particularly in cybersecurity and data analytics, I remain dedicated to driving innovation and exploring the boundaries of technology.</p>
+        </div>
+    </div>
+</body>
+</html>
