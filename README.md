@@ -1,4 +1,4 @@
-# **Student Survey Application**
+  **Student Survey Application**
 
 This application implements a **Student Survey System** leveraging **Angular**, **Node.js**, **Spring Boot**, and **MySQL** to enable comprehensive **CRUD (Create, Read, Update, Delete)** operations.
 
@@ -63,9 +63,104 @@ Follow these steps to set up the application:
 
 - Download and install **Node.js** from the official website.
 - Verify installation by running the following commands in the command line:
-  ```bash
+ 
   npm -v
   node -v
-### **2.  Install Angular CLI**
- ```bash
-npm install -g @angular/cli
+  
+
+### **2. Install Angular CLI**
+
+- Install **Angular CLI** globally:
+
+  npm install -g @angular/cli
+
+- Verify its installation:
+ 
+  ng version
+  
+
+### **3. Install JDK**
+
+- Download and install **JDK** from the Oracle website.
+- Verify installation:
+
+  java -version
+  
+
+### **4. Install Spring Boot**
+
+- Verify **Spring Boot** installation:
+
+  spring --version
+  
+
+### **5. IDE Installation**
+
+- Install **Eclipse IDE** and **Visual Studio Code**.
+
+### **6. Angular Project Setup**
+
+- In the command line, create a new Angular project:
+
+  ng new project-name
+  cd project-name
+  
+- Generate the necessary components:
+ 
+  ng generate component homeComponent
+  ng generate component surveyFormComponent
+  ng generate component survey-listComponent
+  
+
+### **7. Spring Boot Setup**
+
+- Create a **Spring Boot** project using **Spring Initializr** and select the following dependencies:
+  - **Spring Web**
+  - **Spring Data JPA**
+  - **MySQL JDBC Driver**
+
+- Download the generated project and extract it to your desired location.
+
+- Import the extracted project into **Eclipse IDE** as a Maven project and finish the import.
+
+### **8. Run Spring Boot Application**
+
+- Right-click on the project in Eclipse and select:
+
+  Run As > Spring Boot App
+  
+
+- Once the Spring Boot application is running, you can access the application at:
+
+  http://localhost:8080
+ 
+
+### **9. Run Angular Application**
+
+- Navigate to the Angular project directory in the command line and run:
+  
+  ng serve
+ 
+
+- Access the Angular application at:
+ 
+  http://localhost:4200
+  
+
+### **10. Access the Full Application**
+
+- Open a web browser and access both the **Spring Boot backend** and **Angular frontend** at the respective URLs to view and interact with the application.
+
+---
+
+## **Project Structure**
+
+- **Frontend**:  
+  - Angular components and views for handling survey form submission and display.
+  
+- **Backend**:  
+  - Spring Boot REST controllers for managing survey data, including endpoints for CRUD operations.
+  - MySQL database integration for survey data persistence.
+
+---
+
